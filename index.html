@@ -4,10 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
   <link rel="stylesheet" href="./css/style.css">
@@ -33,8 +30,8 @@
       </ul>
       <div class="content-wrapper__form-control">
         <label for="email">Email address</label>
-        <input class="content-wrapper__email" type="text" placeholder="Enter your email" id="email" />
-        <button class="content-wrapper__button">
+        <input class="content-wrapper__email" type="text" placeholder="Enter your email" id="email-entered" />
+        <button id="subscribe-btn" class="content-wrapper__button">
           Subscribe to monthly newsletter</button>
       </div>
     </div>
@@ -42,13 +39,19 @@
       <img src="./assets/illustration-sign-up-desktop.svg" alt="" />
     </div>
   </main>
-  <div class="success-message">
-    <img src="./assets/icon-success.svg" alt="icon_success" class="success-message__icon">
-    <h1 class="success-message__heading"> Thanks for subscribing! </h1>
-    <p class="success-message__desc">A confirmation email has been sent to ash@loremcompany.com.
-      Please open it and click the button inside to confirm your subscription.</p>
-  </div>
   <!-- Sign-up form end -->
+  <!-- Success message toaster start -->
+  <div class="success-message d-none">
+    <img src="./assets/icon-success.svg" alt="icon_success" class="success-message__icon">
+    <h1 class="content-wrapper__heading"> Thanks for subscribing! </h1>
+    <p class="content-wrapper__text">A confirmation email has been sent to <span id="email-insert"></span>.
+      Please open it and click the button inside to confirm your subscription.</p>
+    <button id="dismiss-btn" class="content-wrapper__button">
+      Dismiss message</button>
+  </div>
+  <!-- Success message toaster end -->
+
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
